@@ -139,9 +139,12 @@ nav li a:hover {
   .toggle {
     display: block;
   }
+  .titulo h1{
+      font-size: 27px;
+  }
   .titulo h2 {
     letter-spacing: 1px;
-    font-size: 20px;
+    font-size: 19px;
   }
   nav {
     position: absolute;
