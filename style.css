@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: rgba(221, 221, 221, 0.164);
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.container,
+header {
+  margin: 0 15px;
+  height: 100%;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+header h1 span {
+  color: red;
+}
+header nav {
+  display: flex;
+  gap: 5px;
+}
+nav li a {
+  padding: 5px 1rem;
+  color: #222;
+}
+nav li a.active,
+nav li a:hover {
+  background-color: red;
+  color: #fff;
+}
+.titulo {
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+.titulo h2 {
+  color: #888;
+  letter-spacing: 4px;
+  transform: scaleX(1);
+}
+.contenedor {
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 10px;
+}
+.contenedor.col3 {
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: 30px;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ddd;
+}
+.card {
+  border: 1px solid #888;
+  background-color: #fff;
+}
+.btn {
+  padding: 5px 10px;
+  border: none;
+  background-color: #222;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0 10px;
+}
+.col3 .card {
+  border: none;
+  background-color: transparent;
+}
+
+.contenedor .card h1 {
+  text-align: center;
+  font-size: 22px;
+  margin: 15px 10px;
+  border-bottom: 1px solid #ddd;
+  color: blue;
+}
+.contenedor.col3 .card h1 {
+  margin: 15px 0;
+}
+.contenedor .card:nth-child(2) h1 {
+  color: aqua;
+}
+.contenedor .card:nth-child(3) h1 {
+  color: darkgoldenrod;
+}
+.contenedor .card:nth-child(4) h1 {
+  color: orangered;
+}
+.contenedor.col3 .card {
+  padding: 10px;
+  position: relative;
+}
+.contenedor .card p {
+  padding: 10px;
+  padding-bottom: 2.5rem;
+  font-size: 15px;
+}
+.contenedor.col3 .card p {
+  padding: 10px 0;
+}
+.card-content {
+  padding-bottom: 2rem;
+}
+.contenedor.col3 .card h1 {
+  color: #222;
+}
+.contenedor.col3 .card p span {
+  color: red;
+  font-weight: 600;
+}
+.contenedor.col3 .card li {
+  padding: 5px 0;
+}
+.contenedor.col3 .card a {
+  color: red;
+  padding-left: 5px;
+  font-weight: 600;
+}
+.toggle {
+  display: none;
+}
+@media (max-width: 800px) {
+  .toggle {
+    display: block;
+  }
+  .titulo h2 {
+    letter-spacing: 1px;
+    font-size: 20px;
+  }
+  nav {
+    position: absolute;
+    z-index: 20;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: calc(100% - 30px);
+    gap: 10;
+    top: 70px;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: 0.5s;
+  }
+  nav.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  nav li a {
+    display: block;
+  }
+}
